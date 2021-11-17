@@ -1,0 +1,22 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Detalles departamento Nº {{departamento.numero}}</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{departamento.numero}}</td>
+                    <td>{{departamento.nombre}}</td>
+                    <td>{{departamento.localidad}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a [routerLink]="['/departamentos']" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

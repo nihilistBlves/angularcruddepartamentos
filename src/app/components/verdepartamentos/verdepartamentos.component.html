@@ -1,0 +1,27 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Ver departamentos</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dep of departamentos">
+                    <td>{{dep.numero}}</td>
+                    <td>{{dep.nombre}}</td>
+                    <td>{{dep.localidad}}</td>
+                    <td class="d-flex justify-content-center">
+                        <a [routerLink]="['/departamentos', dep.numero]" class="btn btn-outline-success m-1">Detalles</a>
+                        <a [routerLink]="['/departamentos', dep.numero, 'modificar']" class="btn btn-outline-primary m-1">Modificar</a>
+                        <button (click)="eliminarDepartamento(dep.numero)" class="btn btn-outline-danger m-1">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

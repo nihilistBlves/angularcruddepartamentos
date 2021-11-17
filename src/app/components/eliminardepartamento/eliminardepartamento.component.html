@@ -1,0 +1,8 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Eliminar departamento Nº {{idDepartamento}}</h1>
+        <h3>¿Está seguro de eliminar este departamento?</h3>
+        <button class="btn btn-danger m-1" (click)="eliminarDepartamento()">Eliminar departamento</button>
+        <a [routerLink]="['/departamentos']" class="btn btn-secondary m-1">Volver</a>
+    </div>
+</div>

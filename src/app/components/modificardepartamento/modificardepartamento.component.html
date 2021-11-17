@@ -1,0 +1,20 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Modificar departamento Nº {{departamento.numero}}</h1>
+        <form #formDepartamento="ngForm">
+            <div class="mb-3 mt-3">
+                <label class="form-label">ID Departamento</label>
+                <input type="text" class="form-control" #cajanumero name="cajanumero" id="cajanumero" disabled [value]="departamento.numero">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" #cajanombre name="cajanombre" id="cajanombre" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Localidad</label>
+                <input type="text" class="form-control" #cajalocalidad name="cajalocalidad" id="cajalocalidad" >
+            </div>
+            <button class="btn btn-primary" (click)="modificarDepartamento()">Modificar departamento</button>
+        </form>
+    </div>
+</div>
