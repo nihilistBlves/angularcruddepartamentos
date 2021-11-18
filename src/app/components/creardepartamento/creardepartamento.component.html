@@ -14,7 +14,8 @@
                 <label class="form-label">Localidad</label>
                 <input type="text" class="form-control" #cajalocalidad name="cajalocalidad" id="cajalocalidad" >
             </div>
-            <button class="btn btn-success" (click)="crearDepartamento()">Crear departamento</button>
+            <button class="btn btn-success m-1" (click)="crearDepartamento()">Crear departamento</button>
+            <a [routerLink]="['/departamentos']" class="btn btn-secondary m-1">Volver</a>
         </form>
     </div>
 </div>

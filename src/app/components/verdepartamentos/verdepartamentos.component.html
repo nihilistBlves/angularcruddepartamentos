@@ -15,10 +15,11 @@
                     <td>{{dep.numero}}</td>
                     <td>{{dep.nombre}}</td>
                     <td>{{dep.localidad}}</td>
-                    <td class="d-flex justify-content-center">
+                    <td class="d-flex justify-content-center ">
                         <a [routerLink]="['/departamentos', dep.numero]" class="btn btn-outline-success m-1">Detalles</a>
                         <a [routerLink]="['/departamentos', dep.numero, 'modificar']" class="btn btn-outline-primary m-1">Modificar</a>
                         <button (click)="eliminarDepartamento(dep.numero)" class="btn btn-outline-danger m-1">Eliminar</button>
+                        <a [routerLink]="['/departamentos', dep.numero, 'empleados']" class="btn btn-outline-secondary m-1">Ver empleados</a>
                     </td>
                 </tr>
             </tbody>

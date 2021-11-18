@@ -1,0 +1,26 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Empleados del departamento Nº {{idDepartamento}}</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellido</th>
+                    <th>Departamento</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empleados">
+                    <td>{{emp.idEmpleado}}</td>
+                    <td>{{emp.apellido}}</td>
+                    <td>{{emp.departamento}}</td>
+                    <td class="d-flex justify-content-center">
+                        <a [routerLink]="['/departamentos', idDepartamento, 'empleados', emp.idEmpleado]" class="btn btn-outline-success m-1">Detalles</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a [routerLink]="['/departamentos']" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

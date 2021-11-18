@@ -8,13 +8,14 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" #cajanombre name="cajanombre" id="cajanombre" >
+                <input type="text" class="form-control" #cajanombre name="cajanombre" id="cajanombre" [value]="departamento.nombre">
             </div>
             <div class="mb-3">
                 <label class="form-label">Localidad</label>
-                <input type="text" class="form-control" #cajalocalidad name="cajalocalidad" id="cajalocalidad" >
+                <input type="text" class="form-control" #cajalocalidad name="cajalocalidad" id="cajalocalidad" [value]="departamento.localidad">
             </div>
-            <button class="btn btn-primary" (click)="modificarDepartamento()">Modificar departamento</button>
+            <button class="btn btn-primary m-1" (click)="modificarDepartamento()">Modificar departamento</button>
+            <a [routerLink]="['/departamentos']" class="btn btn-secondary m-1">Volver</a>
         </form>
     </div>
 </div>

@@ -1,0 +1,39 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center" *ngIf="empleado">
+        <h1>Detalles del empleado Nº {{empleado.idEmpleado}}</h1>
+        <form #salarioForm="ngForm" (ngSubmit)="incrementarSalario()">
+            <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                    <label for="cajasalario" class="col-form-label">Introduzca el incremento de salario</label>
+                </div>
+                <div class="col-auto">
+                    <input type="number" class="form-control" #cajasalario name="cajasalario" id="cajasalario">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-success">Incrementar</button>
+                </div>
+              </div>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellido</th>
+                    <th>Oficio</th>
+                    <th>Salario</th>
+                    <th>Departamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{empleado.idEmpleado}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.oficio}}</td>
+                    <td>{{empleado.salario}}</td>
+                    <td>{{empleado.departamento}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a [routerLink]="['/departamentos', idDepartamento, 'empleados']" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

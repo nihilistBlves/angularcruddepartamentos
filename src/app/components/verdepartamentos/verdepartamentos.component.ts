@@ -19,9 +19,15 @@ export class VerdepartamentosComponent implements OnInit {
     });
   }
 
+  getDepartamentos(): void {
+    this._service.getDepartamentos().subscribe(response => {
+      this.departamentos = response;
+    });
+  }
+
   eliminarDepartamento(id: number): void {
     this._service.deleteDepartamento(id.toString()).subscribe(response => {
-      this.departamentos = this.departamentos.filter(departamento => departamento.numero != id);
+      this.getDepartamentos();
     });
   }
 }
